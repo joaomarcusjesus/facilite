@@ -27,4 +27,11 @@ class AccountStoreFormRequest extends FormRequest
             //
         ];
     }
+
+    public function messages()
+    {
+        return [
+            //
+        ];
+    }
 }

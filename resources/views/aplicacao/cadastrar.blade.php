@@ -16,55 +16,76 @@
 		<!-- CADASTRO -->
 		<div class="col-lg-6 col-md-6">
 	      <h2 class="text-center">Cadastrar</h2>
-	      <form class="form-horizontal" action="/" method="post">
+	      <form class="form-horizontal" action="{{ url('/register') }}" method="POST">
+	      	{{ csrf_field() }}
 	        <div class="form-group">
 	          <div class="col-sm-offset-3 col-sm-8">
+
 	            <div class="checkbox">
 	              <label for="checkProf"><input type="checkbox" id="checkProf"/> Sou profissional</label>
 	            </div>
+
 	          </div>
 	        </div>
-	        <div class="form-group">
-	          <label for="inputName" class="col-md-offset-1 col-md-2 control-label">Nome:</label>
+
+	        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+	          <label for="name" class="col-md-offset-1 col-md-2 control-label">Nome:</label>
 	          <div class="col-md-7">
-	            <input required type="text" class="form-control" id="inputName" name="inputName" maxlength="50" placeholder="Ex.: Maria José" />
+	            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" maxlength="50" placeholder="Ex.: Maria José" required autofocus/>
+	            @if ($errors->has('name'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('name') }}</strong>
+                    </span>
+                @endif
 	          </div>
 	        </div>
-	        <div class="form-group">
-	          <label for="inputEmail" class="col-md-offset-1 col-md-2 control-label">Email:</label>
+
+	        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+	          <label for="email" class="col-md-offset-1 col-md-2 control-label">Email:</label>
 	          <div class="col-md-7">
-	            <input required type="email" class="form-control" id="inputEmail" name="inputEmail" maxlength="50" placeholder="Ex.: josemaria@gmail.com"/>
+	            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" maxlength="50" placeholder="Ex.: josemaria@gmail.com" required/>
+	            @if ($errors->has('email'))
+	                <span class="help-block">
+	                    <strong>{{ $errors->first('email') }}</strong>
+	                </span>
+	            @endif
 	          </div>
 	        </div>
+
 	        <div class="form-group" id="formCpf" style="display: none">
 	          <label for="inputCpfCnpj" class="col-md-offset-1 col-md-2 control-label">Cpf:</label>
 	          <div class="col-md-7">
 	            <input required disabled type="text" class="form-control" id="inputCpfCnpj" name="inputCpfCnpj" maxlength="14" placeholder="000.000.000-00"/>
 	          </div>
 	        </div>
+
 	        <div class="form-group" id="formTel" style="display: none">
 	          <label for="inputTel" class="col-md-offset-1 col-md-2 control-label">Tel.:</label>
 	          <div class="col-md-7">
 	            <input required disabled type="tel" class="form-control" id="inputTel" name="inputTel" maxlength="15" placeholder="(00) 00000-0000"/>
 	          </div>
 	        </div>
-	        <div class="form-group">
-	          <label for="inputPass" class="col-md-offset-1 col-md-2 control-label">Senha:</label>
+
+	        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+	          <label for="password" class="col-md-offset-1 col-md-2 control-label">Senha:</label>
 	          <div class="col-md-7">
-	            <input required type="text" class="form-control" id="inputPass" name="inputPass" maxlength="50" placeholder="*****************"/>
+	            <input id="password" type="text" class="form-control" name="password" maxlength="50" placeholder="*****************" required/>
 	          </div>
 	        </div>
+
 	        <div class="form-group">
-	          <label for="inputConfirmPass" class="col-md-offset-1 col-md-2 control-label">Confirmar senha:</label>
+	          <label for="password-confirm" class="col-md-offset-1 col-md-2 control-label">Confirmar senha:</label>
 	          <div class="col-md-7">
-	            <input required type="text" class="form-control" id="inputConfirmPass" name="inputConfirmPass" maxlength="50" placeholder="*****************"/>
+	            <input id="password-confirm" type="text" class="form-control" name="password-confirmation" maxlength="50" placeholder="*****************" required/>
 	          </div>
 	        </div>
+
 	        <div class="form-group">
 	          <div class="text-center">
 	            <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
 	          </div>
 	        </div>
+	        
 	      </form>
 	    </div>
 	    <!-- //CADASTRO -->

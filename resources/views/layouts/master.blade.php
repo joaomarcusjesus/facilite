@@ -25,16 +25,18 @@
 
 </head>
 <body>
+
+	@yield('navbar')
+	
 	<div class="container">
 		@yield('content')
 	</div>
 
+	@yield('footer')
+
 	<!-- JS BOOTSTRAP ARCHIVES -->
 	<script src="{{ asset('js/jquery.min.js') }}"></script>
 	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-	
-	<!-- Scripts -->
-    <!-- <script src="/js/app.js"></script> -->
 
 	@stack('scripts')
 </body>

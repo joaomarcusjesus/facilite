@@ -16,6 +16,18 @@ footer {
     width: 100%;
 }
 
+.top-18{
+	margin-top: 18%;
+}
+
 .top-12{
-	margin-top: 12%;
+	margin-top: 10%;
+}
+
+.top-5{
+	margin-top: 5%;
+}
+
+.border-test{
+	border: 1px solid black;
 }
