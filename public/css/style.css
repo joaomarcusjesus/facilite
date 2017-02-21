@@ -16,12 +16,20 @@ footer {
     width: 100%;
 }
 
+.top-25{
+    margin-top: 25%;
+}
+
 .top-18{
 	margin-top: 18%;
 }
 
 .top-12{
 	margin-top: 10%;
+}
+
+.top-6{
+    margin-top:  6%;
 }
 
 .top-5{

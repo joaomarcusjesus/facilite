@@ -26,7 +26,7 @@ class AccountController extends Controller
     public function create()
     {
 
-        return view('aplicacao.cadastrar');
+        // return view('aplicacao.cadastrar');
 
     }
 

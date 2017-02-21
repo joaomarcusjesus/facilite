@@ -12,8 +12,9 @@ class HomeController extends Controller
      * @return void
      */
     public function __construct()
-    {
-        $this->middleware('auth');
+    {   
+        // Só entra no middleware auth na hora de visualizar os perfis
+        $this->middleware('auth')->only('showProfile');
     }
 
     /**
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('aplicacao.meuhome');
+    }
+
+    public function showProfile(){
+        return "Teste";
     }
 }

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title') Cadastro @endsection
+@section('title') Facilite Serviços - Cadastro @endsection
 
 @section('navbar')
     @include('auth.includes.header')
