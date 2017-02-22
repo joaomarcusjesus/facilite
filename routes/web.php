@@ -19,6 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/para-voce', function(){
+	return view('site.para-voce');
+});
+
+Route::get('/para-sua-casa', function(){
+	return view('site.para-casa');
+});
+
 // Route::get('/meuhome', function(){
 // 	return view ('aplicacao.meuhome');
 // });
