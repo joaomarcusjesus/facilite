@@ -16,9 +16,9 @@
   <!-- ROW -->
   <div class="row">
     
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    ~~~~~~~~~~~~~~~~~ BLOCO PRINCIPAL 1 ESQUERDA (FILTROS) ~~~~~~~~~~~~~~~~~~~~~ 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~***********************************************************************
+    ****************** BLOCO PRINCIPAL 1 ESQUERDA (FILTROS) *********************
+    ***************************************************************************** -->
     <div class="col-lg-2 col-md-3 col-sm-3">
 
       <!-- ESPECIALIDADES -->
@@ -91,9 +91,9 @@
     </div>
     <!-- //BLOCO PRINCIPAL 1 ESQUERDA (FILTROS) -->
     
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    ~~~~~~~~~~~ BLOCO PRINCIPAL 2 CONTEÚDO (LISTA DE PROFISSIONAIS) ~~~~~~~~~~~ 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- *************************************************************************
+    *************** BLOCO PRINCIPAL 2 CONTEÚDO (LISTA DE PROFISSIONAIS) **********
+    ******************************************************************************* -->
     <div class="col-lg-10 col-md-9 col-sm-9 top-3">
 
       <div class="col-lg-4 col-md-6 col-sm-6">
@@ -103,7 +103,8 @@
             <div class=" col-md-4  text-center">  <!-- BLOCO FOTO PROFISSIONAL -->
               <img src="{{ asset('img/perfil2.png') }}" alt="img_perfil2" class="img-circle">
             </div>
-            <div class="col-md-8 ">  <!-- BLOCO NOME E ESTRELAS PROFISSIONAL -->
+            <!-- BLOCO NOME E ESTRELAS PROFISSIONAL -->
+            <div class="col-md-8 ">
               <h4 class="panel-title text-center"><b>Profissional 1</b></h4>
               <hr>
               <!-- ESTRELAS -->
@@ -123,13 +124,14 @@
             <i><p>Aqui descrição...</p></i>
           </div>
           <div class="panel-footer text-center">
-            <a href="/perfil/profissional">Ver Perfil</a>
+            <a href="#">Ver Perfil</a>
           </div>
         </div>
       </div>
       
-      <!-- -------------------------------------------------------------------------------- -->
-
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      
+      <!-- BLOCO PROFISSIONAL 2 -->
       <div class="col-lg-4 col-md-6 col-sm-6">
         <!-- <h4 class="txt-branco"> - </h4> --> <!-- GAMBIARRA -->
         <div class="panel panel-default">
@@ -161,8 +163,9 @@
           </div>
         </div>
       </div>
+      <!-- //BLOCO PROFISSIONAL 2 -->
 
-      <!-- ---------------------------------------------------------------- -->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
       <div class="col-lg-4 col-md-6 col-sm-6">
         <!-- <h4 class="txt-branco"> - </h4> --> <!-- GAMBIARRA -->
@@ -195,7 +198,7 @@
           </div>
         </div>
       </div>
-      <!-- --------------------------------------------------------------- -->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
       <div class="col-lg-4 col-md-6 col-sm-6">
         <!-- <h4 class="txt-branco"> - </h4> --> <!-- GAMBIARRA -->
@@ -228,10 +231,12 @@
           </div>
         </div>
       </div>
-      <!-- --------------------------------------------------------------- -->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     </div>
+    <!-- //BLOCO PRINCIPAL 2 CONTEÚDO (LISTA DE PROFISSIONAIS) -->
 
-  </div><!-- //ROW-->
+  </div>
+  <!-- //ROW-->
 @endsection
 
 @section('footer')

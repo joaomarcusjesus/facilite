@@ -3,7 +3,7 @@
 @section('title') Facilite Serviços - Home @endsection
 
 @section('navbar')
-    @include('aplicacao.includes.header')
+    @include('site.includes.header')
 @endsection
 
 @section('content')
@@ -15,5 +15,5 @@
 @endsection
 
 @section('footer')
-	@include('aplicacao.includes.footer')
+	@include('site.includes.footer')
 @endsection

@@ -39,3 +39,9 @@ footer {
 .border-test{
 	border: 1px solid black;
 }
+
+/* DROPDOWN HOVER - MENU NAVBAR */
+.dropdown:hover .dropdown-menu{
+    display: block;
+    margin-top: 0;
+ }
