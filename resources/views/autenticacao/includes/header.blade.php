@@ -1,4 +1,4 @@
-<nav class="navbar navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar navbar-inverse navbar-static-top">
   <div class="container">
       <div class="navbar-header">
 
@@ -26,8 +26,8 @@
           <ul class="nav navbar-nav navbar-right text-center">
               <!-- Authentication Links -->
               @if (Auth::guest())
-                  <li><a href="{{ url('/login') }}">Entrar</a></li>
-                  <li><a href="{{ url('/register') }}">Cadastrar</a></li>
+                  <li><a href="{{ route('login') }}">Entrar</a></li>
+                  <li><a href="{{ route('cadastrar') }}">Cadastrar</a></li>
               @else
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

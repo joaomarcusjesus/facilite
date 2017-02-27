@@ -26,8 +26,8 @@
           <ul class="nav navbar-nav navbar-right text-center">
               <!-- Authentication Links -->
               @if (Auth::guest())
-                  <li><a href="{{ url('/login') }}">Entrar</a></li>
-                  <li><a href="{{ url('/register') }}">Cadastrar</a></li>
+                  <li><a href="{{ route('/login') }}">Entrar</a></li>
+                  <li><a href="{{ route('/cadastrar') }}">Cadastrar</a></li>
               @else
                   <!-- Link Private Messages -->
                   <li><a href="#"><span class="glyphicon glyphicon-inbox"></span></a></li>

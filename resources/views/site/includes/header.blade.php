@@ -1,4 +1,4 @@
-<nav class="navbar navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar navbar-inverse navbar-static-top">
   <div class="container">
       <div class="navbar-header">
 
@@ -26,8 +26,8 @@
           <ul class="nav navbar-nav navbar-right text-center">
               <!-- Authentication Links -->
               @if (Auth::guest())
-                  <li><a href="{{ url('/login') }}">Entrar</a></li>
-                  <li><a href="{{ url('/register') }}">Cadastrar</a></li>
+                  <li><a href="{{ route('login') }}">Entrar</a></li>
+                  <li><a href="{{ route('cadastrar') }}">Cadastrar</a></li>
               @else
                   <!-- Link Private Messages -->
                   <li><a href="#"><span class="glyphicon glyphicon-inbox"></span></a></li>
@@ -38,13 +38,13 @@
 
                       <ul class="dropdown-menu" role="menu">
                           <li>
-                              <a href="{{ url('/logout') }}"
+                              <a href="{{ route('logout') }}"
                                   onclick="event.preventDefault();
                                            document.getElementById('logout-form').submit();">
                                   Logout
                               </a>
 
-                              <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                   {{ csrf_field() }}
                               </form>
                           </li>
