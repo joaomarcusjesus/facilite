@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -10,10 +11,13 @@ use App\Http\Requests\Auth\RegisterFormRequest; // <- Classe de regras e mensage
 
 class RegisterController extends Controller
 {
-    public function __construct()
+    protected $userRepository;
+
+    public function __construct(UserRepository $userRepository)
     {
         // Middleware 'guest': Se tiver sessão ativa redireciona para '/' e não mostra a page de cadastro
     	$this->middleware('guest')->only('cadastrar');
+    	$this->userRepository = $userRepository;
     }
 
     public function index()
@@ -26,10 +30,8 @@ class RegisterController extends Controller
         return view('autenticacao.cadastrar');
     }
 
-    public function postCadastrar(RegisterFormRequest $request, User $user)
-    {   
-        // Cria instância de User
-        $this->user = $user;
+    public function postCadastrar(RegisterFormRequest $request)
+    {
 
         // Pega todos os dados vindo do formulário
         $dataForm = $request->all();
@@ -40,14 +42,7 @@ class RegisterController extends Controller
         // return dd($dataForm);
 
         // Insere na base de Dados
-        $insert = $user->create($dataForm);
-
-        // Se inseriu redireciona para /login, se não volta pro form e exibe os erros
-        if($insert){
-            return redirect()->route('login');
-        }else{
-            return redirect()->back();
-        }
+        return $this->userRepository->create($dataForm);
     }
 
     public function show($id)

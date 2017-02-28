@@ -29,7 +29,7 @@ class User extends Authenticatable
 
     // Encrypta o password no cadastro
     public function setPasswordAttribute($password)
-    {   
+    {
         $this->attributes['password'] = bcrypt($password);
     }
 }
